@@ -1,33 +1,43 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+     <div class="card-container">
+<div class="wrapper">
+        <div class="card">
+  <img class="image"
+src="https://logos-world.net/wp-content/uploads/2020/05/Pittsburgh-Penguins-symbol.jpg"
+alt="Penguins Logo" width="400" height="225">
+<div class="header">
+  <h3>Pittsburgh Penguins National Hockey Team</h3>
   </div>
+  <h4>Description</h4>
+    <div class="description">
+  <h5>The Pittsburgh Penguins are an NHL hockey team from Pittsburgh, known for their championships and star players like Sidney Crosby and Mario Lemieux.</h5>
+  </div>
+<div class="btn-wrapper">
+    <button onclick="hideDescription()">Details</button>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="button-box">
+<div class="dup-button">
+  <button>Duplicate</button>
+</div>
+     
+<div class="backgroundcolorButton">
+  <button onclick="changeBackgroundColor()"> Change Background Color</button>
+    </div>
+
+<div class="headingButton">
+  <button onclick="changeHeading()"> Change Heading</button>
+    </div>
+
+<div class="deleteCard">
+  <button onclick="deleteDupCard()">Delete</button>
+</div>
+</div>
 </template>
 
 <script>
@@ -54,5 +64,112 @@ li {
 }
 a {
   color: #42b983;
+}
+.wrapper {
+  width: 400px;
+  border: 3px solid blue;
+}
+.btn-wrapper {
+  margin: 24px auto;
+}
+.btn-wrapper button {
+  font-size: 12px;
+  color: blue;
+  background-color: white;
+}
+.btn-wrapper button:hover {
+  color: white;
+  background-color: blue;
+}
+
+@media screen and (max-width: 799px) and (min-width: 501px) {
+  .button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    transform: scale(0.8);
+  }
+  .card img {
+    width: 80%;
+  }
+}
+
+.wrapper {
+  background-color: gold;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin: 10px;
+}
+.dup-button button {
+  background-color: gold;
+  font-size: 12px;
+}
+.dup-button button:hover{
+  color: white;
+  background-color: blue;
+}
+.dup-button button:focus{
+  color: white;
+  background-color: blue;
+}
+
+.backgroundcolorButton button {
+  background-color: gold;
+  font-size: 12px;
+}
+.backgroundcolorButton button:hover{
+  color: white;
+  background-color: blue;
+}
+.backgroundcolorButton button:focus{
+  color: white;
+  background-color: blue;
+}
+
+.headingButton button {
+  background-color: gold;
+  font-size: 12px;
+}
+.headingButton button:hover{
+  color: white;
+  background-color: blue;
+}
+.headingButton button:focus{
+  color: white;
+  background-color: blue;
+}
+
+.deleteCard button {
+  background-color: gold;
+  font-size: 12px;
+}
+.deleteCard button:hover{
+  color: white;
+  background-color: blue;
+}
+.deleteCard button:focus{
+  color: white;
+  background-color: blue;
+}
+
+.button-box {
+  background-color: #f0f0f0;
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding: 1px;
+  display: inline-block;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 </style>
